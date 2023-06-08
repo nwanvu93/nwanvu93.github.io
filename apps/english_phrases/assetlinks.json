@@ -1,0 +1,25 @@
+[{
+  "relation": ["delegate_permission/common.handle_all_urls"],
+  "target": {
+    "namespace": "android_app",
+    "package_name": "com.nwanvu.tienganhthongdung",
+    "sha256_cert_fingerprints":
+    ["75:55:AB:91:55:A3:43:30:47:20:16:EF:3E:C1:E7:E0:27:22:4E:F3:4B:E6:0B:11:E9:53:0E:E7:7B:FD:7E:95"]
+  }
+},
+{
+  "relation": ["delegate_permission/common.get_login_creds"],
+  "target": {
+    "namespace": "web",
+    "site": "https://nwanvu.com"
+  }
+},
+{
+  "relation": ["delegate_permission/common.get_login_creds"],
+  "target": {
+    "namespace": "android_app",
+    "package_name": "com.nwanvu.tienganhthongdung",
+    "sha256_cert_fingerprints":
+    ["75:55:AB:91:55:A3:43:30:47:20:16:EF:3E:C1:E7:E0:27:22:4E:F3:4B:E6:0B:11:E9:53:0E:E7:7B:FD:7E:95"]
+  }
+}]
