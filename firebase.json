@@ -1,0 +1,137 @@
+{
+  "database": {
+    "rules": "database.rules.json"
+  },
+  "hosting": {
+    "public": "docs",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ],
+    "rewrites": [
+      {
+        "source": "/app/alpha_colour/assetlinks",
+        "destination": "/apps/alpha_colour/assetlinks.json"
+      },
+      {
+        "source": "/app/alpha_colour/privacy_policy",
+        "destination": "/apps/alpha_colour/privacy_policy.html"
+      },
+      {
+        "source": "/app/alpha_colour/*",
+        "destination": "/apps/alpha_colour/index.html"
+      },
+      {
+        "source": "/app/alpha_colour",
+        "destination": "/apps/alpha_colour/index.html"
+      },
+
+
+      {
+        "source": "/app/basic_3d/assetlinks",
+        "destination": "/apps/basic_3d/assetlinks.json"
+      },
+      {
+        "source": "/app/basic_3d/privacy_policy",
+        "destination": "/apps/basic_3d/privacy_policy.html"
+      },
+      {
+        "source": "/app/basic_3d/*",
+        "destination": "/apps/basic_3d/index.html"
+      },
+      {
+        "source": "/app/basic_3d",
+        "destination": "/apps/basic_3d/index.html"
+      },
+
+
+      {
+        "source": "/app/englishcommonphrases/assetlinks",
+        "destination": "/apps/english_phrases/assetlinks.json"
+      },
+      {
+        "source": "/app/englishcommonphrases/privacy_policy",
+        "destination": "/apps/english_phrases/privacy_policy.html"
+      },
+      {
+        "source": "/app/englishcommonphrases/*",
+        "destination": "/apps/english_phrases/index.html"
+      },
+      {
+        "source": "/app/englishcommonphrases",
+        "destination": "/apps/english_phrases/index.html"
+      },
+
+
+      {
+        "source": "/app/english_verbs/assetlinks",
+        "destination": "/apps/english_verbs/assetlinks.json"
+      },
+      {
+        "source": "/app/english_verbs/privacy_policy",
+        "destination": "/apps/english_verbs/privacy_policy.html"
+      },
+      {
+        "source": "/app/english_verbs/*",
+        "destination": "/apps/english_verbs/index.html"
+      },
+      {
+        "source": "/app/english_verbs",
+        "destination": "/apps/english_verbs/index.html"
+      },
+
+        
+      {
+        "source": "/app/inmobitestdeviceid/privacy_policy",
+        "destination": "/apps/inmobitestdeviceid/privacy_policy.html"
+      },
+      {
+        "source": "/app/inmobitestdeviceid/*",
+        "destination": "/apps/inmobitestdeviceid/index.html"
+      },
+      {
+        "source": "/app/inmobitestdeviceid",
+        "destination": "/apps/inmobitestdeviceid/index.html"
+      },
+        
+        
+      {
+        "source": "/app/numbers/privacy_policy",
+        "destination": "/apps/numbers/privacy_policy.html"
+      },
+      {
+        "source": "/app/numbers/*",
+        "destination": "/apps/numbers/index.html"
+      },
+      {
+        "source": "/app/numbers",
+        "destination": "/apps/numbers/index.html"
+      },
+        
+                
+      {
+        "source": "/app/v_proj/privacy_policy",
+        "destination": "/apps/v_proj/privacy_policy.html"
+      },
+      {
+        "source": "/app/v_proj/*",
+        "destination": "/apps/v_proj/index.html"
+      },
+      {
+        "source": "/app/v_proj",
+        "destination": "/apps/v_proj/index.html"
+      },
+
+      {
+        "source": "/app-ads.txt",
+        "destination": "/app-ads.txt"
+      },
+        
+      {
+        "source": "**",
+        "destination": "/index.html"
+      }
+    ]
+  }
+}

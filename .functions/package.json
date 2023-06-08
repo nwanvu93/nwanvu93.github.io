@@ -1,0 +1,11 @@
+{
+  "name": "rounding-apps-rating-functions",
+  "description": "Rounded up the rating of an app",
+  "license": "MIT",
+  "dependencies": {
+    "firebase-admin": "^5.5.1",
+    "firebase-functions": "^0.7.3",
+    "microtime": "^2.1.6",
+    "round-to": "^2.0.0"
+  }
+}

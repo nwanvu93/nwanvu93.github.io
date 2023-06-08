@@ -1,0 +1,12 @@
+{
+  "rules": {
+    "moreapps": {
+     	".read": true,
+    	".write": "auth != null" 
+    },
+    "debug": {
+      ".read": "auth.email == 'nwanvu@test.com'",
+      ".write": "auth.email == 'nwanvu@test.com'"
+    }
+  }
+}
