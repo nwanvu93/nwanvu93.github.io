@@ -1,0 +1,11 @@
+{
+    "editor.codeActionsOnSave": {
+        "source.fixAll": "explicit"
+    },
+    "editor.formatOnSave": true,
+    "livePreview.serverRoot": "docs",
+    "livePreview.defaultPreviewPath": "/docs/index.html",
+    "github-actions.workflows.pinned.workflows": [
+        ".github/workflows/firebase-hosting-merge.yml"
+    ]
+}

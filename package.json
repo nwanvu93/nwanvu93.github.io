@@ -1,0 +1,17 @@
+{
+  "name": "nwanvu-server",
+  "version": "1.0.0",
+  "description": "PORTFOLIO PAGE",
+  "main": "server.js",
+  "scripts": {
+    "start": "nodemon server.js"
+  },
+  "author": "nwanvu",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.21.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.7"
+  }
+}

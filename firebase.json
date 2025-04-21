@@ -11,20 +11,20 @@
     ],
     "rewrites": [
       {
-        "source": "/app/alpha_colour/assetlinks",
-        "destination": "/apps/alpha_colour/assetlinks.json"
+        "source": "/app/alpha_blend/assetlinks",
+        "destination": "/apps/alpha_blend/assetlinks.json"
       },
       {
-        "source": "/app/alpha_colour/privacy_policy",
-        "destination": "/apps/alpha_colour/privacy_policy.html"
+        "source": "/app/alpha_blend/privacy_policy",
+        "destination": "/apps/alpha_blend/privacy_policy.html"
       },
       {
-        "source": "/app/alpha_colour/*",
-        "destination": "/apps/alpha_colour/index.html"
+        "source": "/app/alpha_blend/*",
+        "destination": "/apps/alpha_blend/index.html"
       },
       {
-        "source": "/app/alpha_colour",
-        "destination": "/apps/alpha_colour/index.html"
+        "source": "/app/alpha_blend",
+        "destination": "/apps/alpha_blend/index.html"
       },
 
 
