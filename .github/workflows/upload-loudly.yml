@@ -25,14 +25,14 @@ jobs:
         #   fetch-depth: 0
       - run: ls
 
-      - name: Checkout loudly
-        uses: actions/checkout@v4
-        with:
-          repository: nwanvu93/loudly
-          token: ${{ secrets.GITHUB_TOKEN }}
-          ref: main
-          path: loudly
-          fetch-depth: 0
+      # - name: Checkout loudly
+      #   uses: actions/checkout@v4
+      #   with:
+      #     repository: nwanvu93/loudly
+      #     token: ${{ secrets.GITHUB_TOKEN }}
+      #     ref: main
+      #     path: loudly
+      #     fetch-depth: 0
           
       - uses: subosito/flutter-action@v2.21.0
         with:
@@ -40,6 +40,7 @@ jobs:
 
       - name: Build and copy
         run: |
+          git clone https://github.com/nwanvu93/loudly.git
           ls
           cd loudly
           flutter pub get
