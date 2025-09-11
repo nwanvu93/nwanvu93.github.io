@@ -5,7 +5,7 @@
     "display": "standalone",
     "background_color": "#0175C2",
     "theme_color": "#ffe66d",
-    "description": "Turn your phone into a big, bold sign to share messages instantly.",
+    "description": "Turn your phone into a big, bold sign to share messages instantly",
     "orientation": "portrait-primary",
     "prefer_related_applications": false,
     "icons": [
