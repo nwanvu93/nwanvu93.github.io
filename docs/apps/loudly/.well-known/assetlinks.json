@@ -1,0 +1,15 @@
+[
+    {
+        "relation": [
+            "delegate_permission/common.handle_all_urls",
+            "delegate_permission/common.get_login_creds"
+        ],
+        "target": {
+            "namespace": "android_app",
+            "package_name": "com.nwanvu.androidalphahexcolor",
+            "sha256_cert_fingerprints": [
+                "B9:05:F5:08:A7:A0:F1:61:27:92:67:2F:A5:33:5C:EE:23:6C:4F:26:23:BB:4D:93:6F:7A:46:37:92:CA:B0:9D"
+            ]
+        }
+    }
+]
