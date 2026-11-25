@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>AlphaBlend — Support, User Guide &amp; Color Science Reference</title>
-  <meta name="description" content="Official support center, user guide, WCAG accessibility reference, and color vision science glossary for AlphaBlend V3." />
+  <meta name="description"
+    content="Official support center, user guide, WCAG accessibility reference, and color vision science glossary for AlphaBlend V3." />
   <style>
     :root {
       --bg: #f6f7f9;
@@ -50,8 +52,13 @@
       --shadow: 0 1px 2px rgba(0, 0, 0, 0.3), 0 10px 28px rgba(0, 0, 0, 0.35);
     }
 
-    * { box-sizing: border-box; }
-    html { scroll-behavior: smooth; }
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
 
     body {
       margin: 0;
@@ -62,8 +69,14 @@
       -webkit-font-smoothing: antialiased;
     }
 
-    a { color: var(--primary); text-decoration: none; }
-    a:hover { text-decoration: underline; }
+    a {
+      color: var(--primary);
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
 
     code {
       font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
@@ -76,8 +89,13 @@
     }
 
     /* Language visibility */
-    body[data-lang="en"] .lang-vi { display: none !important; }
-    body[data-lang="vi"] .lang-en { display: none !important; }
+    body[data-lang="en"] .lang-vi {
+      display: none !important;
+    }
+
+    body[data-lang="vi"] .lang-en {
+      display: none !important;
+    }
 
     /* Top Header */
     .topbar {
@@ -109,7 +127,10 @@
       color: var(--text);
       letter-spacing: -0.02em;
     }
-    .brand:hover { text-decoration: none; }
+
+    .brand:hover {
+      text-decoration: none;
+    }
 
     .logo-box {
       width: 34px;
@@ -130,8 +151,15 @@
       font-size: 0.92rem;
       font-weight: 600;
     }
-    .nav-links a { color: var(--text-muted); }
-    .nav-links a:hover { color: var(--text); text-decoration: none; }
+
+    .nav-links a {
+      color: var(--text-muted);
+    }
+
+    .nav-links a:hover {
+      color: var(--text);
+      text-decoration: none;
+    }
 
     .controls {
       display: flex;
@@ -151,6 +179,7 @@
       cursor: pointer;
       transition: background 0.15s ease, border-color 0.15s ease;
     }
+
     .pill-btn:hover {
       background: var(--surface-alt);
       border-color: var(--primary);
@@ -219,16 +248,19 @@
       color: var(--text);
       transition: transform 0.15s ease, border-color 0.15s ease;
     }
+
     .quick-card:hover {
       transform: translateY(-2px);
       border-color: var(--primary);
       text-decoration: none;
     }
+
     .quick-card strong {
       display: block;
       font-size: 0.95rem;
       margin-bottom: 3px;
     }
+
     .quick-card span {
       font-size: 0.82rem;
       color: var(--text-muted);
@@ -300,7 +332,10 @@
       color: var(--text-muted);
       font-size: 0.94rem;
     }
-    .card p:last-child { margin-bottom: 0; }
+
+    .card p:last-child {
+      margin-bottom: 0;
+    }
 
     .card ul {
       margin: 0;
@@ -308,8 +343,14 @@
       color: var(--text-muted);
       font-size: 0.93rem;
     }
-    .card li { margin-bottom: 7px; }
-    .card li strong { color: var(--text); }
+
+    .card li {
+      margin-bottom: 7px;
+    }
+
+    .card li strong {
+      color: var(--text);
+    }
 
     /* Format Table */
     .table-wrap {
@@ -326,12 +367,18 @@
       border-collapse: collapse;
       font-size: 0.9rem;
     }
-    th, td {
+
+    th,
+    td {
       text-align: left;
       padding: 12px 16px;
       border-bottom: 1px solid var(--border);
     }
-    tr:last-child td { border-bottom: none; }
+
+    tr:last-child td {
+      border-bottom: none;
+    }
+
     th {
       background: var(--surface-alt);
       font-size: 0.8rem;
@@ -369,14 +416,42 @@
       font-size: 0.82rem;
       font-weight: 700;
     }
-    .wcag-aaa { background: rgba(22, 163, 74, 0.14); color: #15803d; }
-    .wcag-aa  { background: rgba(13, 148, 136, 0.15); color: #0f766e; }
-    .wcag-aal { background: rgba(234, 88, 12, 0.15); color: #c2410c; }
-    .wcag-fail { background: rgba(220, 38, 38, 0.13); color: #b91c1c; }
-    [data-theme="dark"] .wcag-aaa { color: #4ade80; }
-    [data-theme="dark"] .wcag-aa  { color: #2dd4bf; }
-    [data-theme="dark"] .wcag-aal { color: #fb923c; }
-    [data-theme="dark"] .wcag-fail { color: #f87171; }
+
+    .wcag-aaa {
+      background: rgba(22, 163, 74, 0.14);
+      color: #15803d;
+    }
+
+    .wcag-aa {
+      background: rgba(13, 148, 136, 0.15);
+      color: #0f766e;
+    }
+
+    .wcag-aal {
+      background: rgba(234, 88, 12, 0.15);
+      color: #c2410c;
+    }
+
+    .wcag-fail {
+      background: rgba(220, 38, 38, 0.13);
+      color: #b91c1c;
+    }
+
+    [data-theme="dark"] .wcag-aaa {
+      color: #4ade80;
+    }
+
+    [data-theme="dark"] .wcag-aa {
+      color: #2dd4bf;
+    }
+
+    [data-theme="dark"] .wcag-aal {
+      color: #fb923c;
+    }
+
+    [data-theme="dark"] .wcag-fail {
+      color: #f87171;
+    }
 
     /* CVD Visual Simulation Strips */
     .cvd-card {
@@ -386,6 +461,7 @@
       padding: 18px 20px;
       box-shadow: var(--shadow);
     }
+
     .cvd-head {
       display: flex;
       justify-content: space-between;
@@ -393,10 +469,12 @@
       gap: 8px;
       margin-bottom: 10px;
     }
+
     .cvd-head h4 {
       margin: 0;
       font-size: 1rem;
     }
+
     .cvd-tag {
       font-size: 0.74rem;
       font-weight: 700;
@@ -406,6 +484,7 @@
       color: var(--text-muted);
       border: 1px solid var(--border);
     }
+
     .swatch-strip {
       display: grid;
       grid-template-columns: repeat(6, 1fr);
@@ -415,6 +494,7 @@
       margin-bottom: 10px;
       border: 1px solid var(--border);
     }
+
     .cvd-card p {
       margin: 0;
       font-size: 0.88rem;
@@ -430,6 +510,7 @@
       margin: 12px 0;
       border: 1px solid var(--border);
     }
+
     .tonal-stop {
       padding: 10px 2px;
       text-align: center;
@@ -444,6 +525,7 @@
       gap: 10px;
       margin-top: 10px;
     }
+
     .harmony-item {
       display: flex;
       align-items: center;
@@ -451,11 +533,13 @@
       gap: 12px;
       font-size: 0.88rem;
     }
+
     .harmony-dots {
       display: flex;
       gap: 6px;
       flex-shrink: 0;
     }
+
     .h-dot {
       width: 24px;
       height: 24px;
@@ -471,6 +555,7 @@
       flex-wrap: wrap;
       margin: 12px 0;
     }
+
     .checker-chip {
       width: 64px;
       height: 44px;
@@ -487,10 +572,12 @@
       background-position: 0 0, 0 7px, 7px -7px, -7px 0;
       background-color: #ffffff;
     }
+
     .checker-chip-overlay {
       position: absolute;
       inset: 0;
     }
+
     .alpha-arrow {
       font-weight: 800;
       color: var(--text-muted);
@@ -501,6 +588,7 @@
       display: grid;
       gap: 10px;
     }
+
     details {
       background: var(--surface);
       border: 1px solid var(--border);
@@ -508,6 +596,7 @@
       padding: 16px 20px;
       box-shadow: var(--shadow);
     }
+
     summary {
       font-weight: 700;
       font-size: 0.98rem;
@@ -518,7 +607,11 @@
       justify-content: space-between;
       gap: 12px;
     }
-    summary::-webkit-details-marker { display: none; }
+
+    summary::-webkit-details-marker {
+      display: none;
+    }
+
     summary::after {
       content: "+";
       font-size: 1.25rem;
@@ -526,7 +619,11 @@
       color: var(--primary);
       line-height: 1;
     }
-    details[open] summary::after { content: "−"; }
+
+    details[open] summary::after {
+      content: "−";
+    }
+
     details .faq-body {
       margin-top: 10px;
       padding-top: 10px;
@@ -548,20 +645,24 @@
       justify-content: space-between;
       gap: 24px;
     }
+
     .contact-card h2 {
       margin: 0 0 8px;
       font-size: 1.45rem;
     }
+
     .contact-card p {
       margin: 0;
       color: var(--text-muted);
       max-width: 580px;
     }
+
     .contact-actions {
       display: flex;
       flex-wrap: wrap;
       gap: 10px;
     }
+
     .btn-primary {
       display: inline-flex;
       align-items: center;
@@ -574,7 +675,12 @@
       border-radius: 12px;
       transition: filter 0.15s ease;
     }
-    .btn-primary:hover { filter: brightness(1.06); text-decoration: none; }
+
+    .btn-primary:hover {
+      filter: brightness(1.06);
+      text-decoration: none;
+    }
+
     .btn-secondary {
       display: inline-flex;
       align-items: center;
@@ -587,7 +693,11 @@
       padding: 12px 20px;
       border-radius: 12px;
     }
-    .btn-secondary:hover { border-color: var(--primary); text-decoration: none; }
+
+    .btn-secondary:hover {
+      border-color: var(--primary);
+      text-decoration: none;
+    }
 
     footer {
       border-top: 1px solid var(--border);
@@ -602,12 +712,21 @@
     }
 
     @media (max-width: 720px) {
-      .nav-links { display: none; }
-      .hero { padding: 28px 22px; }
-      .tonal-strip { grid-template-columns: repeat(6, 1fr); }
+      .nav-links {
+        display: none;
+      }
+
+      .hero {
+        padding: 28px 22px;
+      }
+
+      .tonal-strip {
+        grid-template-columns: repeat(6, 1fr);
+      }
     }
   </style>
 </head>
+
 <body data-lang="en">
   <!-- Sticky Navigation -->
   <header class="topbar">
@@ -617,24 +736,66 @@
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="28" height="28">
             <defs>
               <clipPath id="ab-drop-clip">
-                <path d="M 245.78 96.82 Q 256.00 82.00 266.22 96.82 L 359.74 232.49 A 126.00 126.00 0 1 1 152.26 232.49 Z"/>
+                <path
+                  d="M 245.78 96.82 Q 256.00 82.00 266.22 96.82 L 359.74 232.49 A 126.00 126.00 0 1 1 152.26 232.49 Z" />
               </clipPath>
             </defs>
             <g clip-path="url(#ab-drop-clip)" fill="#111111" shape-rendering="crispEdges">
-              <rect x="175" y="166" width="18" height="18"/><rect x="247" y="166" width="18" height="18"/><rect x="319" y="166" width="18" height="18"/>
-              <rect x="175" y="202" width="18" height="18"/><rect x="211" y="202" width="18" height="18"/><rect x="247" y="202" width="18" height="18"/><rect x="283" y="202" width="18" height="18"/><rect x="319" y="202" width="18" height="18"/>
-              <rect x="139" y="238" width="18" height="18"/><rect x="175" y="238" width="18" height="18"/><rect x="211" y="238" width="18" height="18"/><rect x="247" y="238" width="18" height="18"/><rect x="283" y="238" width="18" height="18"/><rect x="319" y="238" width="18" height="18"/><rect x="355" y="238" width="18" height="18"/>
-              <rect x="121" y="256" width="18" height="18"/><rect x="157" y="256" width="18" height="18"/><rect x="193" y="256" width="18" height="18"/><rect x="229" y="256" width="18" height="18"/><rect x="265" y="256" width="18" height="18"/><rect x="301" y="256" width="18" height="18"/><rect x="337" y="256" width="18" height="18"/><rect x="373" y="256" width="18" height="18"/>
-              <rect x="139" y="274" width="18" height="18"/><rect x="157" y="274" width="18" height="18"/><rect x="175" y="274" width="18" height="18"/><rect x="211" y="274" width="18" height="18"/><rect x="229" y="274" width="18" height="18"/><rect x="247" y="274" width="18" height="18"/><rect x="283" y="274" width="18" height="18"/><rect x="301" y="274" width="18" height="18"/><rect x="319" y="274" width="18" height="18"/><rect x="355" y="274" width="18" height="18"/><rect x="373" y="274" width="18" height="18"/>
-              <rect x="121" y="292" width="18" height="18"/><rect x="157" y="292" width="18" height="18"/><rect x="193" y="292" width="18" height="18"/><rect x="229" y="292" width="18" height="18"/><rect x="265" y="292" width="18" height="18"/><rect x="301" y="292" width="18" height="18"/><rect x="337" y="292" width="18" height="18"/><rect x="373" y="292" width="18" height="18"/>
-              <rect x="121" y="310" width="270" height="18"/>
-              <rect x="121" y="328" width="18" height="18"/><rect x="157" y="328" width="54" height="18"/><rect x="229" y="328" width="54" height="18"/><rect x="301" y="328" width="54" height="18"/><rect x="373" y="328" width="18" height="18"/>
-              <rect x="121" y="346" width="270" height="36"/>
-              <rect x="139" y="382" width="234" height="18"/>
-              <rect x="157" y="400" width="198" height="18"/>
-              <rect x="175" y="418" width="162" height="18"/>
+              <rect x="175" y="166" width="18" height="18" />
+              <rect x="247" y="166" width="18" height="18" />
+              <rect x="319" y="166" width="18" height="18" />
+              <rect x="175" y="202" width="18" height="18" />
+              <rect x="211" y="202" width="18" height="18" />
+              <rect x="247" y="202" width="18" height="18" />
+              <rect x="283" y="202" width="18" height="18" />
+              <rect x="319" y="202" width="18" height="18" />
+              <rect x="139" y="238" width="18" height="18" />
+              <rect x="175" y="238" width="18" height="18" />
+              <rect x="211" y="238" width="18" height="18" />
+              <rect x="247" y="238" width="18" height="18" />
+              <rect x="283" y="238" width="18" height="18" />
+              <rect x="319" y="238" width="18" height="18" />
+              <rect x="355" y="238" width="18" height="18" />
+              <rect x="121" y="256" width="18" height="18" />
+              <rect x="157" y="256" width="18" height="18" />
+              <rect x="193" y="256" width="18" height="18" />
+              <rect x="229" y="256" width="18" height="18" />
+              <rect x="265" y="256" width="18" height="18" />
+              <rect x="301" y="256" width="18" height="18" />
+              <rect x="337" y="256" width="18" height="18" />
+              <rect x="373" y="256" width="18" height="18" />
+              <rect x="139" y="274" width="18" height="18" />
+              <rect x="157" y="274" width="18" height="18" />
+              <rect x="175" y="274" width="18" height="18" />
+              <rect x="211" y="274" width="18" height="18" />
+              <rect x="229" y="274" width="18" height="18" />
+              <rect x="247" y="274" width="18" height="18" />
+              <rect x="283" y="274" width="18" height="18" />
+              <rect x="301" y="274" width="18" height="18" />
+              <rect x="319" y="274" width="18" height="18" />
+              <rect x="355" y="274" width="18" height="18" />
+              <rect x="373" y="274" width="18" height="18" />
+              <rect x="121" y="292" width="18" height="18" />
+              <rect x="157" y="292" width="18" height="18" />
+              <rect x="193" y="292" width="18" height="18" />
+              <rect x="229" y="292" width="18" height="18" />
+              <rect x="265" y="292" width="18" height="18" />
+              <rect x="301" y="292" width="18" height="18" />
+              <rect x="337" y="292" width="18" height="18" />
+              <rect x="373" y="292" width="18" height="18" />
+              <rect x="121" y="310" width="270" height="18" />
+              <rect x="121" y="328" width="18" height="18" />
+              <rect x="157" y="328" width="54" height="18" />
+              <rect x="229" y="328" width="54" height="18" />
+              <rect x="301" y="328" width="54" height="18" />
+              <rect x="373" y="328" width="18" height="18" />
+              <rect x="121" y="346" width="270" height="36" />
+              <rect x="139" y="382" width="234" height="18" />
+              <rect x="157" y="400" width="198" height="18" />
+              <rect x="175" y="418" width="162" height="18" />
             </g>
-            <path d="M 245.78 96.82 Q 256.00 82.00 266.22 96.82 L 359.74 232.49 A 126.00 126.00 0 1 1 152.26 232.49 Z" fill="none" stroke="#111111" stroke-width="28" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M 245.78 96.82 Q 256.00 82.00 266.22 96.82 L 359.74 232.49 A 126.00 126.00 0 1 1 152.26 232.49 Z"
+              fill="none" stroke="#111111" stroke-width="28" stroke-linecap="round" stroke-linejoin="round" />
           </svg>
         </span>
         <span>AlphaBlend Support</span>
@@ -642,7 +803,8 @@
 
       <nav class="nav-links" aria-label="Primary navigation">
         <a href="#guide"><span class="lang-en">User Guide</span><span class="lang-vi">Hướng dẫn</span></a>
-        <a href="#science"><span class="lang-en">Vision &amp; Color Science</span><span class="lang-vi">Khoa học Màu &amp; Thị giác</span></a>
+        <a href="#science"><span class="lang-en">Vision &amp; Color Science</span><span class="lang-vi">Khoa học Màu
+            &amp; Thị giác</span></a>
         <a href="#faq"><span class="lang-en">FAQ</span><span class="lang-vi">Hỏi đáp</span></a>
         <a href="#contact"><span class="lang-en">Contact</span><span class="lang-vi">Liên hệ</span></a>
       </nav>
@@ -666,10 +828,13 @@
       <h1 class="lang-vi">Hướng dẫn Sử dụng, Khoa học Thị giác &amp; Hỗ trợ</h1>
 
       <p class="lang-en">
-        Everything you need to get the most out of AlphaBlend on iOS, Android, and Web — from alpha compositing and multi-platform color formats to WCAG 2.1 contrast analysis, color blindness simulation, and brand kit management.
+        Everything you need to get the most out of AlphaBlend on iOS, Android, and Web — from alpha compositing and
+        multi-platform color formats to WCAG 2.1 contrast analysis, color blindness simulation, and brand kit
+        management.
       </p>
       <p class="lang-vi">
-        Mọi hướng dẫn giúp bạn khai thác tối đa AlphaBlend trên iOS, Android và Web — từ pha màu trong suốt (Alpha), sao chép đa định dạng, phân tích tương phản WCAG 2.1, giả lập mù màu cho đến quản lý Sổ màu &amp; Brand Kit.
+        Mọi hướng dẫn giúp bạn khai thác tối đa AlphaBlend trên iOS, Android và Web — từ pha màu trong suốt (Alpha), sao
+        chép đa định dạng, phân tích tương phản WCAG 2.1, giả lập mù màu cho đến quản lý Sổ màu &amp; Brand Kit.
       </p>
 
       <div class="quick-grid">
@@ -700,43 +865,74 @@
     <!-- SECTION 1: FEATURE USER GUIDE -->
     <section id="guide">
       <div class="section-head">
-        <span class="eyebrow"><span class="lang-en">Feature Guide</span><span class="lang-vi">Hướng dẫn chức năng</span></span>
+        <span class="eyebrow"><span class="lang-en">Feature Guide</span><span class="lang-vi">Hướng dẫn chức
+            năng</span></span>
         <h2 class="lang-en">How to Use AlphaBlend</h2>
         <h2 class="lang-vi">Hướng dẫn sử dụng các tính năng chính</h2>
-        <p class="lang-en">AlphaBlend is organized into four workspaces accessible from the bottom navigation bar on phones or the side navigation rail on tablets and wide screens.</p>
-        <p class="lang-vi">AlphaBlend được tổ chức thành 4 khu vực làm việc chính, truy cập nhanh qua thanh điều hướng dưới cùng trên điện thoại hoặc thanh bên trái trên máy tính bảng và màn hình rộng.</p>
+        <p class="lang-en">AlphaBlend is organized into four workspaces accessible from the bottom navigation bar on
+          phones or the side navigation rail on tablets and wide screens.</p>
+        <p class="lang-vi">AlphaBlend được tổ chức thành 4 khu vực làm việc chính, truy cập nhanh qua thanh điều hướng
+          dưới cùng trên điện thoại hoặc thanh bên trái trên máy tính bảng và màn hình rộng.</p>
       </div>
 
       <!-- 1.1 Blend Studio -->
       <div id="blend-studio" style="margin-bottom: 24px;">
         <div class="grid-2">
           <article class="card">
-            <h3>1. Blend Studio — <span class="lang-en">Color Picker &amp; Photo Palette</span><span class="lang-vi">Chọn màu &amp; Trích màu từ ảnh</span></h3>
+            <h3>1. Blend Studio — <span class="lang-en">Color Picker &amp; Photo Palette</span><span
+                class="lang-vi">Chọn màu &amp; Trích màu từ ảnh</span></h3>
             <ul class="lang-en">
-              <li><strong>Hex Input:</strong> Type or paste 3-digit (<code>#F90</code>), 6-digit (<code>#FF9800</code>), or 8-digit ARGB (<code>#CCFF9800</code>) codes directly.</li>
-              <li><strong>RGB &amp; HSL Sliders:</strong> Switch between Red/Green/Blue channels and Hue/Saturation/Lightness while adjusting the shared <strong>Alpha (A)</strong> opacity slider (0–100%).</li>
-              <li><strong>Inline Photo Extractor:</strong> Switch to the <strong>Photo</strong> tab, choose any image from your library, adjust the color count slider (3–12 dominant swatches), tap any swatch to blend it live, or tap <strong>Save Palette</strong> to store it as a Moodboard.</li>
-              <li><strong>Flattened Preview:</strong> The split hero banner compares your semi-transparent color over a checkerboard on the left with its exact equivalent solid color blended onto your active surface on the right.</li>
+              <li><strong>Hex Input:</strong> Type or paste 3-digit (<code>#F90</code>), 6-digit (<code>#FF9800</code>),
+                or 8-digit ARGB (<code>#CCFF9800</code>) codes directly.</li>
+              <li><strong>RGB &amp; HSL Sliders:</strong> Switch between Red/Green/Blue channels and
+                Hue/Saturation/Lightness while adjusting the shared <strong>Alpha (A)</strong> opacity slider (0–100%).
+              </li>
+              <li><strong>Inline Photo Extractor:</strong> Switch to the <strong>Photo</strong> tab, choose any image
+                from your library, adjust the color count slider (3–12 dominant swatches), tap any swatch to blend it
+                live, or tap <strong>Save Palette</strong> to store it as a Moodboard.</li>
+              <li><strong>Flattened Preview:</strong> The split hero banner compares your semi-transparent color over a
+                checkerboard on the left with its exact equivalent solid color blended onto your active surface on the
+                right.</li>
             </ul>
             <ul class="lang-vi">
-              <li><strong>Nhập mã Hex:</strong> Gõ hoặc dán trực tiếp mã 3 ký tự (<code>#F90</code>), 6 ký tự (<code>#FF9800</code>) hoặc 8 ký tự ARGB (<code>#CCFF9800</code>).</li>
-              <li><strong>Thanh trượt RGB &amp; HSL:</strong> Chuyển đổi linh hoạt giữa hệ màu RGB và HSL, đi kèm thanh trượt <strong>Alpha (A)</strong> chỉnh độ trong suốt từ 0–100%.</li>
-              <li><strong>Trích xuất màu trực tiếp từ ảnh:</strong> Chọn tab <strong>Từ ảnh (Photo)</strong>, chọn ảnh bất kỳ từ thư viện, kéo thanh số lượng màu (3–12 màu chủ đạo), chạm vào từng màu để pha trực tiếp hoặc bấm <strong>Lưu bảng màu</strong> thành Moodboard.</li>
-              <li><strong>Xem trước màu Solid (Flattened):</strong> Khung màu phía trên hiển thị song song màu bán trong suốt trên nền caro bên trái và màu đặc tương đương sau khi phủ lên nền thật bên phải.</li>
+              <li><strong>Nhập mã Hex:</strong> Gõ hoặc dán trực tiếp mã 3 ký tự (<code>#F90</code>), 6 ký tự
+                (<code>#FF9800</code>) hoặc 8 ký tự ARGB (<code>#CCFF9800</code>).</li>
+              <li><strong>Thanh trượt RGB &amp; HSL:</strong> Chuyển đổi linh hoạt giữa hệ màu RGB và HSL, đi kèm thanh
+                trượt <strong>Alpha (A)</strong> chỉnh độ trong suốt từ 0–100%.</li>
+              <li><strong>Trích xuất màu trực tiếp từ ảnh:</strong> Chọn tab <strong>Từ ảnh (Photo)</strong>, chọn ảnh
+                bất kỳ từ thư viện, kéo thanh số lượng màu (3–12 màu chủ đạo), chạm vào từng màu để pha trực tiếp hoặc
+                bấm <strong>Lưu bảng màu</strong> thành Moodboard.</li>
+              <li><strong>Xem trước màu Solid (Flattened):</strong> Khung màu phía trên hiển thị song song màu bán trong
+                suốt trên nền caro bên trái và màu đặc tương đương sau khi phủ lên nền thật bên phải.</li>
             </ul>
           </article>
 
           <article class="card">
-            <h3>2. <span class="lang-en">Alpha Scale, Surface Blend &amp; Reverse Solver</span><span class="lang-vi">Thang Alpha, Chồng lớp &amp; Giải ngược Alpha</span></h3>
+            <h3>2. <span class="lang-en">Alpha Scale, Surface Blend &amp; Reverse Solver</span><span
+                class="lang-vi">Thang Alpha, Chồng lớp &amp; Giải ngược Alpha</span></h3>
             <ul class="lang-en">
-              <li><strong>Alpha Scale (0–100%):</strong> Choose <code>10%</code>, <code>5%</code>, or <code>1%</code> steps and pick a backdrop surface preset. Each row shows the alpha percentage, two-digit hex byte (<code>00</code>–<code>FF</code>), transparent code, flattened solid hex, and live WCAG contrast badge. Tap any code to copy instantly.</li>
-              <li><strong>Surface Blend &amp; WCAG Contrast:</strong> Simulate text, icons, and cards in your semi-transparent color over real light or dark surfaces. If contrast falls below WCAG AA (<code>4.5:1</code>), AlphaBlend calculates the <strong>minimum opacity</strong> needed to pass and lets you apply it in one tap.</li>
-              <li><strong>Reverse Alpha Solver:</strong> Have a background hex and a resulting solid hex sampled from a mockup or screenshot? Enter both to solve backwards for the exact overlay color and opacity percentage — or toggle <strong>Lock overlay</strong> to solve opacity for your active studio color.</li>
+              <li><strong>Alpha Scale (0–100%):</strong> Choose <code>10%</code>, <code>5%</code>, or <code>1%</code>
+                steps and pick a backdrop surface preset. Each row shows the alpha percentage, two-digit hex byte
+                (<code>00</code>–<code>FF</code>), transparent code, flattened solid hex, and live WCAG contrast badge.
+                Tap any code to copy instantly.</li>
+              <li><strong>Surface Blend &amp; WCAG Contrast:</strong> Simulate text, icons, and cards in your
+                semi-transparent color over real light or dark surfaces. If contrast falls below WCAG AA
+                (<code>4.5:1</code>), AlphaBlend calculates the <strong>minimum opacity</strong> needed to pass and lets
+                you apply it in one tap.</li>
+              <li><strong>Reverse Alpha Solver:</strong> Have a background hex and a resulting solid hex sampled from a
+                mockup or screenshot? Enter both to solve backwards for the exact overlay color and opacity percentage —
+                or toggle <strong>Lock overlay</strong> to solve opacity for your active studio color.</li>
             </ul>
             <ul class="lang-vi">
-              <li><strong>Thang Alpha (0–100%):</strong> Chọn bước nhảy <code>10%</code>, <code>5%</code> hoặc <code>1%</code> cùng màu nền mẫu. Mỗi dòng hiển thị %, mã byte hex (<code>00</code>–<code>FF</code>), mã trong suốt, màu solid gộp và huy hiệu tương phản WCAG. Chạm vào bất kỳ mã nào để sao chép ngay.</li>
-              <li><strong>Chồng lớp &amp; Tương phản WCAG:</strong> Mô phỏng chữ, icon và thẻ bán trong suốt trên nền sáng/tối thật. Nếu độ tương phản thấp hơn chuẩn WCAG AA (<code>4.5:1</code>), ứng dụng tự tính <strong>độ mờ tối thiểu cần thiết</strong> và cho phép áp dụng với 1 chạm.</li>
-              <li><strong>Giải ngược Alpha (Reverse Alpha Solver):</strong> Có màu nền và màu kết quả đo từ mockup/ảnh chụp? Nhập 2 mã hex này để tính ngược ra màu lớp phủ và % độ mờ chính xác — hoặc bật <strong>Cố định lớp phủ</strong> để giải % opacity cho màu bạn đang chọn.</li>
+              <li><strong>Thang Alpha (0–100%):</strong> Chọn bước nhảy <code>10%</code>, <code>5%</code> hoặc
+                <code>1%</code> cùng màu nền mẫu. Mỗi dòng hiển thị %, mã byte hex (<code>00</code>–<code>FF</code>), mã
+                trong suốt, màu solid gộp và huy hiệu tương phản WCAG. Chạm vào bất kỳ mã nào để sao chép ngay.</li>
+              <li><strong>Chồng lớp &amp; Tương phản WCAG:</strong> Mô phỏng chữ, icon và thẻ bán trong suốt trên nền
+                sáng/tối thật. Nếu độ tương phản thấp hơn chuẩn WCAG AA (<code>4.5:1</code>), ứng dụng tự tính
+                <strong>độ mờ tối thiểu cần thiết</strong> và cho phép áp dụng với 1 chạm.</li>
+              <li><strong>Giải ngược Alpha (Reverse Alpha Solver):</strong> Có màu nền và màu kết quả đo từ mockup/ảnh
+                chụp? Nhập 2 mã hex này để tính ngược ra màu lớp phủ và % độ mờ chính xác — hoặc bật <strong>Cố định lớp
+                  phủ</strong> để giải % opacity cho màu bạn đang chọn.</li>
             </ul>
           </article>
         </div>
@@ -747,7 +943,8 @@
             <thead>
               <tr>
                 <th><span class="lang-en">Format</span><span class="lang-vi">Định dạng</span></th>
-                <th><span class="lang-en">Example (Amber @ 80%)</span><span class="lang-vi">Ví dụ (Cam @ 80%)</span></th>
+                <th><span class="lang-en">Example (Amber @ 80%)</span><span class="lang-vi">Ví dụ (Cam @ 80%)</span>
+                </th>
                 <th><span class="lang-en">Where It Is Used</span><span class="lang-vi">Nền tảng sử dụng</span></th>
               </tr>
             </thead>
@@ -755,42 +952,50 @@
               <tr>
                 <td><strong>Android Hex</strong></td>
                 <td><code>#CCFF9800</code></td>
-                <td><span class="lang-en">Android XML (<code>#AARRGGBB</code> — alpha first)</span><span class="lang-vi">Android XML (<code>#AARRGGBB</code> — alpha đứng đầu)</span></td>
+                <td><span class="lang-en">Android XML (<code>#AARRGGBB</code> — alpha first)</span><span
+                    class="lang-vi">Android XML (<code>#AARRGGBB</code> — alpha đứng đầu)</span></td>
               </tr>
               <tr>
                 <td><strong>Web Hex</strong></td>
                 <td><code>#FF9800CC</code></td>
-                <td><span class="lang-en">CSS / Figma / Web (<code>#RRGGBBAA</code> — alpha last)</span><span class="lang-vi">CSS / Figma / Web (<code>#RRGGBBAA</code> — alpha đứng cuối)</span></td>
+                <td><span class="lang-en">CSS / Figma / Web (<code>#RRGGBBAA</code> — alpha last)</span><span
+                    class="lang-vi">CSS / Figma / Web (<code>#RRGGBBAA</code> — alpha đứng cuối)</span></td>
               </tr>
               <tr>
                 <td><strong>Solid Hex</strong></td>
                 <td><code>#FF9800</code></td>
-                <td><span class="lang-en">Standard opaque 6-digit hex across design tools</span><span class="lang-vi">Mã màu đặc 6 ký tự tiêu chuẩn trên mọi công cụ</span></td>
+                <td><span class="lang-en">Standard opaque 6-digit hex across design tools</span><span class="lang-vi">Mã
+                    màu đặc 6 ký tự tiêu chuẩn trên mọi công cụ</span></td>
               </tr>
               <tr>
                 <td><strong>CSS rgba()</strong></td>
                 <td><code>rgba(255, 152, 0, 0.80)</code></td>
-                <td><span class="lang-en">Web stylesheets &amp; canvas drawing</span><span class="lang-vi">CSS Web &amp; vẽ đồ hoạ Canvas</span></td>
+                <td><span class="lang-en">Web stylesheets &amp; canvas drawing</span><span class="lang-vi">CSS Web &amp;
+                    vẽ đồ hoạ Canvas</span></td>
               </tr>
               <tr>
                 <td><strong>Flutter</strong></td>
                 <td><code>Color(0xCCFF9800)</code></td>
-                <td><span class="lang-en">Dart / Flutter &amp; Jetpack Compose ARGB hex literal</span><span class="lang-vi">Flutter (Dart) &amp; Jetpack Compose (Kotlin)</span></td>
+                <td><span class="lang-en">Dart / Flutter &amp; Jetpack Compose ARGB hex literal</span><span
+                    class="lang-vi">Flutter (Dart) &amp; Jetpack Compose (Kotlin)</span></td>
               </tr>
               <tr>
                 <td><strong>SwiftUI</strong></td>
                 <td><code>Color(red: 1.00, green: 0.60, blue: 0.00, opacity: 0.80)</code></td>
-                <td><span class="lang-en">iOS, iPadOS &amp; macOS SwiftUI views</span><span class="lang-vi">Ứng dụng iOS, iPadOS &amp; macOS dùng SwiftUI</span></td>
+                <td><span class="lang-en">iOS, iPadOS &amp; macOS SwiftUI views</span><span class="lang-vi">Ứng dụng
+                    iOS, iPadOS &amp; macOS dùng SwiftUI</span></td>
               </tr>
               <tr>
                 <td><strong>Tailwind</strong></td>
                 <td><code>bg-[#FF9800]/80</code></td>
-                <td><span class="lang-en">Tailwind CSS utility classes with opacity modifier</span><span class="lang-vi">Class tiện ích Tailwind CSS kèm hậu tố độ mờ</span></td>
+                <td><span class="lang-en">Tailwind CSS utility classes with opacity modifier</span><span
+                    class="lang-vi">Class tiện ích Tailwind CSS kèm hậu tố độ mờ</span></td>
               </tr>
               <tr>
                 <td><strong>CSS OKLCH</strong></td>
                 <td><code>oklch(0.769 0.165 70.1 / 80%)</code></td>
-                <td><span class="lang-en">Modern CSS Color Level 4 perceptually uniform color</span><span class="lang-vi">Chuẩn CSS Color Level 4 đồng đều theo cảm nhận thị giác</span></td>
+                <td><span class="lang-en">Modern CSS Color Level 4 perceptually uniform color</span><span
+                    class="lang-vi">Chuẩn CSS Color Level 4 đồng đều theo cảm nhận thị giác</span></td>
               </tr>
             </tbody>
           </table>
@@ -800,38 +1005,69 @@
       <!-- 1.2 Theme Studio & 1.3 Notebook -->
       <div class="grid-2" style="margin-bottom: 18px;">
         <article class="card" id="theme-studio">
-          <h3>3. Theme Studio — <span class="lang-en">Design Systems &amp; UI Preview</span><span class="lang-vi">Tạo bộ Theme &amp; Kiểm thử UI</span></h3>
+          <h3>3. Theme Studio — <span class="lang-en">Design Systems &amp; UI Preview</span><span class="lang-vi">Tạo bộ
+              Theme &amp; Kiểm thử UI</span></h3>
           <ul class="lang-en">
-            <li><strong>Seed Color:</strong> Enter any hex code, tap a preset, or send a color from Blend Studio / Notebook.</li>
-            <li><strong>Tonal Scale (50–950):</strong> Automatically builds an 11-stop light-to-dark shade ramp ready for Tailwind or Material tokens. Tap any tile to copy its hex.</li>
-            <li><strong>Color Harmonies:</strong> Generates <em>Complementary</em>, <em>Analogous</em>, <em>Triadic</em>, and <em>Split Complementary</em> combinations from your seed hue.</li>
-            <li><strong>Live UI Preview &amp; Accessibility:</strong> Preview real Material 3 components (app bar, semantic container, buttons, chips, progress bar, and semantic role pills) in both <strong>Light</strong> and <strong>Dark</strong> modes, and switch the <strong>Color Blindness Simulation</strong> dropdown to verify legibility.</li>
-            <li><strong>Get Code &amp; Save Kit:</strong> Export ready-to-paste theme snippets for <strong>Flutter</strong>, <strong>Jetpack Compose</strong>, <strong>CSS Variables</strong>, or <strong>Design Tokens JSON</strong>, or save a 5-stop kit directly to your Notebook.</li>
+            <li><strong>Seed Color:</strong> Enter any hex code, tap a preset, or send a color from Blend Studio /
+              Notebook.</li>
+            <li><strong>Tonal Scale (50–950):</strong> Automatically builds an 11-stop light-to-dark shade ramp ready
+              for Tailwind or Material tokens. Tap any tile to copy its hex.</li>
+            <li><strong>Color Harmonies:</strong> Generates <em>Complementary</em>, <em>Analogous</em>,
+              <em>Triadic</em>, and <em>Split Complementary</em> combinations from your seed hue.</li>
+            <li><strong>Live UI Preview &amp; Accessibility:</strong> Preview real Material 3 components (app bar,
+              semantic container, buttons, chips, progress bar, and semantic role pills) in both <strong>Light</strong>
+              and <strong>Dark</strong> modes, and switch the <strong>Color Blindness Simulation</strong> dropdown to
+              verify legibility.</li>
+            <li><strong>Get Code &amp; Save Kit:</strong> Export ready-to-paste theme snippets for
+              <strong>Flutter</strong>, <strong>Jetpack Compose</strong>, <strong>CSS Variables</strong>, or
+              <strong>Design Tokens JSON</strong>, or save a 5-stop kit directly to your Notebook.</li>
           </ul>
           <ul class="lang-vi">
-            <li><strong>Màu gốc (Seed Color):</strong> Nhập mã hex bất kỳ, chọn màu mẫu hoặc gửi trực tiếp một màu từ Pha màu / Sổ màu.</li>
-            <li><strong>Thang sắc độ (50–950):</strong> Tự động tạo dải 11 sắc độ từ sáng đến tối chuẩn Material / Tailwind. Chạm vào từng ô để sao chép mã hex.</li>
-            <li><strong>Phối màu hài hoà:</strong> Tự động gợi ý các bộ màu <em>Bổ trợ</em>, <em>Tương đồng</em>, <em>Bộ ba</em> và <em>Bổ trợ phân tách</em> từ sắc độ màu gốc.</li>
-            <li><strong>Xem trước UI &amp; Thị giác:</strong> Kiểm thử bộ màu trên các thành phần UI thực tế (nút bấm, thẻ, chip, thanh tiến độ, vai trò màu) ở cả chế độ <strong>Sáng / Tối</strong>, và bật menu <strong>Giả lập mù màu</strong> để kiểm tra khả năng đọc.</li>
-            <li><strong>Lấy code &amp; Lưu bộ màu:</strong> Xuất mã nguồn cho <strong>Flutter</strong>, <strong>Jetpack Compose</strong>, <strong>CSS Variables</strong> hoặc <strong>Design Tokens JSON</strong>, hoặc lưu nhanh bộ 5 sắc độ vào Sổ màu.</li>
+            <li><strong>Màu gốc (Seed Color):</strong> Nhập mã hex bất kỳ, chọn màu mẫu hoặc gửi trực tiếp một màu từ
+              Pha màu / Sổ màu.</li>
+            <li><strong>Thang sắc độ (50–950):</strong> Tự động tạo dải 11 sắc độ từ sáng đến tối chuẩn Material /
+              Tailwind. Chạm vào từng ô để sao chép mã hex.</li>
+            <li><strong>Phối màu hài hoà:</strong> Tự động gợi ý các bộ màu <em>Bổ trợ</em>, <em>Tương đồng</em>, <em>Bộ
+                ba</em> và <em>Bổ trợ phân tách</em> từ sắc độ màu gốc.</li>
+            <li><strong>Xem trước UI &amp; Thị giác:</strong> Kiểm thử bộ màu trên các thành phần UI thực tế (nút bấm,
+              thẻ, chip, thanh tiến độ, vai trò màu) ở cả chế độ <strong>Sáng / Tối</strong>, và bật menu <strong>Giả
+                lập mù màu</strong> để kiểm tra khả năng đọc.</li>
+            <li><strong>Lấy code &amp; Lưu bộ màu:</strong> Xuất mã nguồn cho <strong>Flutter</strong>, <strong>Jetpack
+                Compose</strong>, <strong>CSS Variables</strong> hoặc <strong>Design Tokens JSON</strong>, hoặc lưu
+              nhanh bộ 5 sắc độ vào Sổ màu.</li>
           </ul>
         </article>
 
         <article class="card" id="notebook">
-          <h3>4. Color Notebook, <span class="lang-en">Recently Copied &amp; Sync</span><span class="lang-vi">Vừa sao chép &amp; Đồng bộ</span></h3>
+          <h3>4. Color Notebook, <span class="lang-en">Recently Copied &amp; Sync</span><span class="lang-vi">Vừa sao
+              chép &amp; Đồng bộ</span></h3>
           <ul class="lang-en">
-            <li><strong>Brand Kits &amp; Collections:</strong> Group colors by category (<em>Brand Kit</em>, <em>Swatches</em>, <em>Design System</em>, <em>Moodboard</em>, <em>Interior / Style</em>), with custom labels and usage notes (e.g., <em>"Use on white backgrounds only"</em>).</li>
-            <li><strong>Extract from Photo:</strong> Pick a photo, choose 3–12 dominant colors, select which swatches to keep (long-press any swatch to copy), and save as a Moodboard.</li>
-            <li><strong>Instant Handoff:</strong> Tap <strong>Blend</strong> or <strong>Theme</strong> on any saved color tile to open it immediately in Blend Studio or Theme Studio.</li>
-            <li><strong>Recently Copied:</strong> Automatically records your last 20 copied color values (in the bottom sheet on phones or floating corner dock on tablets/web) for 1-tap re-copying.</li>
-            <li><strong>Cloud Sync &amp; JSON Backup:</strong> Works 100% offline in Local Mode. Optionally sign in with Google in <strong>Settings</strong> to sync your Notebook in real time via Cloud Firestore, or export/import a JSON backup anytime.</li>
+            <li><strong>Brand Kits &amp; Collections:</strong> Group colors by category (<em>Brand Kit</em>,
+              <em>Swatches</em>, <em>Design System</em>, <em>Moodboard</em>, <em>Interior / Style</em>), with custom
+              labels and usage notes (e.g., <em>"Use on white backgrounds only"</em>).</li>
+            <li><strong>Extract from Photo:</strong> Pick a photo, choose 3–12 dominant colors, select which swatches to
+              keep (long-press any swatch to copy), and save as a Moodboard.</li>
+            <li><strong>Instant Handoff:</strong> Tap <strong>Blend</strong> or <strong>Theme</strong> on any saved
+              color tile to open it immediately in Blend Studio or Theme Studio.</li>
+            <li><strong>Recently Copied:</strong> Automatically records your last 20 copied color values (in the bottom
+              sheet on phones or floating corner dock on tablets/web) for 1-tap re-copying.</li>
+            <li><strong>Cloud Sync &amp; JSON Backup:</strong> Works 100% offline in Local Mode. Optionally sign in with
+              Google in <strong>Settings</strong> to sync your Notebook in real time via Cloud Firestore, or
+              export/import a JSON backup anytime.</li>
           </ul>
           <ul class="lang-vi">
-            <li><strong>Brand Kit &amp; Bộ sưu tập:</strong> Phân loại bộ màu theo danh mục (<em>Brand Kit</em>, <em>Màu riêng lẻ</em>, <em>Design System</em>, <em>Moodboard</em>, <em>Nội thất / Phong cách</em>) kèm nhãn và ghi chú sử dụng.</li>
-            <li><strong>Trích từ ảnh:</strong> Chọn ảnh từ thư viện, điều chỉnh 3–12 màu chủ đạo, tick chọn các màu muốn giữ (nhấn giữ vào ô màu để sao chép nhanh) và lưu thành Moodboard.</li>
-            <li><strong>Chuyển tiếp 1 chạm:</strong> Bấm <strong>Pha màu</strong> hoặc <strong>Theme</strong> ngay trên thẻ màu đã lưu để mở tức thì trong công cụ tương ứng.</li>
-            <li><strong>Vừa sao chép (Recently Copied):</strong> Tự động lưu 20 mã màu sao chép gần nhất (dạng bảng trượt trên điện thoại hoặc khung nổi ở góc màn hình trên tablet/web) để dán lại nhanh.</li>
-            <li><strong>Đồng bộ Cloud &amp; Sao lưu JSON:</strong> Hoạt động đầy đủ ngoại tuyến ở chế độ Local. Tuỳ chọn đăng nhập Google trong <strong>Cài đặt</strong> để đồng bộ Sổ màu thời gian thực qua Cloud Firestore, hoặc xuất/nhập bản sao lưu JSON bất cứ lúc nào.</li>
+            <li><strong>Brand Kit &amp; Bộ sưu tập:</strong> Phân loại bộ màu theo danh mục (<em>Brand Kit</em>, <em>Màu
+                riêng lẻ</em>, <em>Design System</em>, <em>Moodboard</em>, <em>Nội thất / Phong cách</em>) kèm nhãn và
+              ghi chú sử dụng.</li>
+            <li><strong>Trích từ ảnh:</strong> Chọn ảnh từ thư viện, điều chỉnh 3–12 màu chủ đạo, tick chọn các màu muốn
+              giữ (nhấn giữ vào ô màu để sao chép nhanh) và lưu thành Moodboard.</li>
+            <li><strong>Chuyển tiếp 1 chạm:</strong> Bấm <strong>Pha màu</strong> hoặc <strong>Theme</strong> ngay trên
+              thẻ màu đã lưu để mở tức thì trong công cụ tương ứng.</li>
+            <li><strong>Vừa sao chép (Recently Copied):</strong> Tự động lưu 20 mã màu sao chép gần nhất (dạng bảng
+              trượt trên điện thoại hoặc khung nổi ở góc màn hình trên tablet/web) để dán lại nhanh.</li>
+            <li><strong>Đồng bộ Cloud &amp; Sao lưu JSON:</strong> Hoạt động đầy đủ ngoại tuyến ở chế độ Local. Tuỳ chọn
+              đăng nhập Google trong <strong>Cài đặt</strong> để đồng bộ Sổ màu thời gian thực qua Cloud Firestore, hoặc
+              xuất/nhập bản sao lưu JSON bất cứ lúc nào.</li>
           </ul>
         </article>
       </div>
@@ -840,27 +1076,41 @@
     <!-- SECTION 2: VISION SCIENCE & COLOR GLOSSARY -->
     <section id="science">
       <div class="section-head">
-        <span class="eyebrow"><span class="lang-en">Color &amp; Vision Science Glossary</span><span class="lang-vi">Thuật ngữ Màu sắc &amp; Khoa học Thị giác</span></span>
+        <span class="eyebrow"><span class="lang-en">Color &amp; Vision Science Glossary</span><span
+            class="lang-vi">Thuật ngữ Màu sắc &amp; Khoa học Thị giác</span></span>
         <h2 class="lang-en">Understanding the Science Behind AlphaBlend</h2>
         <h2 class="lang-vi">Giải thích các thuật ngữ kỹ thuật &amp; khoa học thị giác</h2>
-        <p class="lang-en">Theme Studio and Blend Studio use established colorimetry and human vision models to help you design interfaces that look great and remain readable for everyone.</p>
-        <p class="lang-vi">Theme Studio và Blend Studio ứng dụng các mô hình đo màu và sinh lý học thị giác tiêu chuẩn để giúp bạn tạo ra giao diện vừa thẩm mỹ vừa dễ đọc cho mọi người dùng.</p>
+        <p class="lang-en">Theme Studio and Blend Studio use established colorimetry and human vision models to help you
+          design interfaces that look great and remain readable for everyone.</p>
+        <p class="lang-vi">Theme Studio và Blend Studio ứng dụng các mô hình đo màu và sinh lý học thị giác tiêu chuẩn
+          để giúp bạn tạo ra giao diện vừa thẩm mỹ vừa dễ đọc cho mọi người dùng.</p>
       </div>
 
       <!-- 2.1 Color Vision Deficiency (CVD) -->
       <div class="card" style="margin-bottom: 18px;">
-        <h3><span class="lang-en">Color Blindness Simulation (Color Vision Deficiency — CVD)</span><span class="lang-vi">Giả lập mù màu (Khiếm khuyết thị giác màu — CVD)</span></h3>
+        <h3><span class="lang-en">Color Blindness Simulation (Color Vision Deficiency — CVD)</span><span
+            class="lang-vi">Giả lập mù màu (Khiếm khuyết thị giác màu — CVD)</span></h3>
         <p class="lang-en">
-          Human color vision relies on three types of cone photoreceptors in the retina: <strong>L-cones</strong> (long wavelengths — red), <strong>M-cones</strong> (medium wavelengths — green), and <strong>S-cones</strong> (short wavelengths — blue). Approximately 1 in 12 men and 1 in 200 women experience some form of Color Vision Deficiency (CVD), where one or more cone types are missing or shifted.
+          Human color vision relies on three types of cone photoreceptors in the retina: <strong>L-cones</strong> (long
+          wavelengths — red), <strong>M-cones</strong> (medium wavelengths — green), and <strong>S-cones</strong> (short
+          wavelengths — blue). Approximately 1 in 12 men and 1 in 200 women experience some form of Color Vision
+          Deficiency (CVD), where one or more cone types are missing or shifted.
         </p>
         <p class="lang-vi">
-          Thị giác màu của con người dựa trên 3 loại tế bào nón trên võng mạc: <strong>tế bào L</strong> (bước sóng dài — đỏ), <strong>tế bào M</strong> (bước sóng trung — xanh lá) và <strong>tế bào S</strong> (bước sóng ngắn — xanh dương). Khoảng 1/12 nam giới và 1/200 nữ giới gặp tình trạng khiếm khuyết thị giác màu (CVD) khi một hoặc nhiều loại tế bào nón bị thiếu hụt hoặc suy giảm chức năng.
+          Thị giác màu của con người dựa trên 3 loại tế bào nón trên võng mạc: <strong>tế bào L</strong> (bước sóng dài
+          — đỏ), <strong>tế bào M</strong> (bước sóng trung — xanh lá) và <strong>tế bào S</strong> (bước sóng ngắn —
+          xanh dương). Khoảng 1/12 nam giới và 1/200 nữ giới gặp tình trạng khiếm khuyết thị giác màu (CVD) khi một hoặc
+          nhiều loại tế bào nón bị thiếu hụt hoặc suy giảm chức năng.
         </p>
         <p class="lang-en">
-          In <strong>Theme Studio &rarr; Color Blindness Simulation</strong>, AlphaBlend applies RGB color-transformation matrices to the Live UI Preview so you can inspect how buttons, error badges, and surfaces appear under each vision condition:
+          In <strong>Theme Studio &rarr; Color Blindness Simulation</strong>, AlphaBlend applies RGB
+          color-transformation matrices to the Live UI Preview so you can inspect how buttons, error badges, and
+          surfaces appear under each vision condition:
         </p>
         <p class="lang-vi">
-          Trong <strong>Theme Studio &rarr; Giả lập mù màu</strong>, AlphaBlend áp dụng các ma trận chuyển đổi màu lên khung <em>Xem trước giao diện</em> để bạn kiểm chứng trực tiếp cách nút bấm, nhãn trạng thái và nền hiển thị dưới từng dạng thị giác:
+          Trong <strong>Theme Studio &rarr; Giả lập mù màu</strong>, AlphaBlend áp dụng các ma trận chuyển đổi màu lên
+          khung <em>Xem trước giao diện</em> để bạn kiểm chứng trực tiếp cách nút bấm, nhãn trạng thái và nền hiển thị
+          dưới từng dạng thị giác:
         </p>
 
         <div class="grid-2" style="margin-top: 14px;">
@@ -877,14 +1127,17 @@
               <div style="background:#0ea5e9"></div>
               <div style="background:#8b5cf6"></div>
             </div>
-            <p class="lang-en">All three cone types function normally, distinguishing the full red–green and blue–yellow axes.</p>
-            <p class="lang-vi">Cả 3 loại tế bào nón hoạt động bình thường, phân biệt đầy đủ trục màu đỏ–xanh lá và xanh dương–vàng.</p>
+            <p class="lang-en">All three cone types function normally, distinguishing the full red–green and blue–yellow
+              axes.</p>
+            <p class="lang-vi">Cả 3 loại tế bào nón hoạt động bình thường, phân biệt đầy đủ trục màu đỏ–xanh lá và xanh
+              dương–vàng.</p>
           </div>
 
           <div class="cvd-card">
             <div class="cvd-head">
               <h4>Protanopia <span class="lang-vi">(Mù màu đỏ)</span></h4>
-              <span class="cvd-tag"><span class="lang-en">Red-blind · L-cone</span><span class="lang-vi">Thiếu tế bào L</span></span>
+              <span class="cvd-tag"><span class="lang-en">Red-blind · L-cone</span><span class="lang-vi">Thiếu tế bào
+                  L</span></span>
             </div>
             <div class="swatch-strip" aria-label="Simulated palette under Protanopia">
               <div style="background:#9d9737"></div>
@@ -894,14 +1147,17 @@
               <div style="background:#4b8dd6"></div>
               <div style="background:#7476d8"></div>
             </div>
-            <p class="lang-en">Missing L-cones. Pure reds lose brightness and shift toward dark olive/brown; red error states and green success states can look nearly identical.</p>
-            <p class="lang-vi">Thiếu tế bào nón L. Màu đỏ mất độ sáng và ngả sang nâu/ô-liu sẫm; trạng thái lỗi (đỏ) và thành công (xanh lá) dễ bị lẫn vào nhau.</p>
+            <p class="lang-en">Missing L-cones. Pure reds lose brightness and shift toward dark olive/brown; red error
+              states and green success states can look nearly identical.</p>
+            <p class="lang-vi">Thiếu tế bào nón L. Màu đỏ mất độ sáng và ngả sang nâu/ô-liu sẫm; trạng thái lỗi (đỏ) và
+              thành công (xanh lá) dễ bị lẫn vào nhau.</p>
           </div>
 
           <div class="cvd-card">
             <div class="cvd-head">
               <h4>Deuteranopia <span class="lang-vi">(Mù màu xanh lá)</span></h4>
-              <span class="cvd-tag"><span class="lang-en">Green-blind · M-cone</span><span class="lang-vi">Thiếu tế bào M</span></span>
+              <span class="cvd-tag"><span class="lang-en">Green-blind · M-cone</span><span class="lang-vi">Thiếu tế bào
+                  M</span></span>
             </div>
             <div class="swatch-strip" aria-label="Simulated palette under Deuteranopia">
               <div style="background:#af9936"></div>
@@ -911,14 +1167,17 @@
               <div style="background:#448fd7"></div>
               <div style="background:#777ad8"></div>
             </div>
-            <p class="lang-en">Missing M-cones (most common CVD). Greens and reds merge into muted yellow-brown tones, while blues remain clear. Pair status colors with icons or text labels.</p>
-            <p class="lang-vi">Thiếu tế bào nón M (dạng phổ biến nhất). Xanh lá và đỏ hoà về tông vàng-nâu đục, trong khi màu xanh dương vẫn rõ. Luôn kết hợp màu trạng thái với icon hoặc chữ.</p>
+            <p class="lang-en">Missing M-cones (most common CVD). Greens and reds merge into muted yellow-brown tones,
+              while blues remain clear. Pair status colors with icons or text labels.</p>
+            <p class="lang-vi">Thiếu tế bào nón M (dạng phổ biến nhất). Xanh lá và đỏ hoà về tông vàng-nâu đục, trong
+              khi màu xanh dương vẫn rõ. Luôn kết hợp màu trạng thái với icon hoặc chữ.</p>
           </div>
 
           <div class="cvd-card">
             <div class="cvd-head">
               <h4>Tritanopia <span class="lang-vi">(Mù màu xanh dương)</span></h4>
-              <span class="cvd-tag"><span class="lang-en">Blue-blind · S-cone</span><span class="lang-vi">Thiếu tế bào S</span></span>
+              <span class="cvd-tag"><span class="lang-en">Blue-blind · S-cone</span><span class="lang-vi">Thiếu tế bào
+                  S</span></span>
             </div>
             <div class="swatch-strip" aria-label="Simulated palette under Tritanopia">
               <div style="background:#e94846"></div>
@@ -928,14 +1187,17 @@
               <div style="background:#14b3c0"></div>
               <div style="background:#886a76"></div>
             </div>
-            <p class="lang-en">Missing S-cones (rare). Blues appear greenish-teal, purples look dark reddish-grey, and yellows shift toward pale pink or light grey.</p>
-            <p class="lang-vi">Thiếu tế bào nón S (hiếm gặp). Xanh dương chuyển sang xanh ngọc lục, tím ngả xám đỏ và vàng nhạt dần sang hồng phấn hoặc xám sáng.</p>
+            <p class="lang-en">Missing S-cones (rare). Blues appear greenish-teal, purples look dark reddish-grey, and
+              yellows shift toward pale pink or light grey.</p>
+            <p class="lang-vi">Thiếu tế bào nón S (hiếm gặp). Xanh dương chuyển sang xanh ngọc lục, tím ngả xám đỏ và
+              vàng nhạt dần sang hồng phấn hoặc xám sáng.</p>
           </div>
 
           <div class="cvd-card" style="grid-column: 1 / -1;">
             <div class="cvd-head">
               <h4>Achromatopsia <span class="lang-vi">(Đơn sắc / Mù màu hoàn toàn)</span></h4>
-              <span class="cvd-tag"><span class="lang-en">Monochrome · Luminance only</span><span class="lang-vi">Chỉ cảm nhận độ sáng</span></span>
+              <span class="cvd-tag"><span class="lang-en">Monochrome · Luminance only</span><span class="lang-vi">Chỉ
+                  cảm nhận độ sáng</span></span>
             </div>
             <div class="swatch-strip" aria-label="Simulated palette under Achromatopsia">
               <div style="background:#747474"></div>
@@ -945,8 +1207,12 @@
               <div style="background:#828282"></div>
               <div style="background:#7a7a7a"></div>
             </div>
-            <p class="lang-en">All color information is perceived purely as grayscale luminance (<code>0.299R + 0.587G + 0.114B</code>). Testing in Achromatopsia immediately reveals whether your buttons, cards, and text have strong enough brightness separation independent of hue.</p>
-            <p class="lang-vi">Mọi màu sắc chỉ được cảm nhận dưới dạng thang độ xám (<code>0.299R + 0.587G + 0.114B</code>). Kiểm thử ở chế độ này cho thấy ngay liệu nút bấm, thẻ và chữ của bạn có đủ độ chênh sáng tách biệt mà không phụ thuộc vào sắc màu hay không.</p>
+            <p class="lang-en">All color information is perceived purely as grayscale luminance
+              (<code>0.299R + 0.587G + 0.114B</code>). Testing in Achromatopsia immediately reveals whether your
+              buttons, cards, and text have strong enough brightness separation independent of hue.</p>
+            <p class="lang-vi">Mọi màu sắc chỉ được cảm nhận dưới dạng thang độ xám
+              (<code>0.299R + 0.587G + 0.114B</code>). Kiểm thử ở chế độ này cho thấy ngay liệu nút bấm, thẻ và chữ của
+              bạn có đủ độ chênh sáng tách biệt mà không phụ thuộc vào sắc màu hay không.</p>
           </div>
         </div>
       </div>
@@ -954,43 +1220,63 @@
       <!-- 2.2 WCAG 2.1 Contrast & Relative Luminance + Alpha Compositing -->
       <div class="grid-2" style="margin-bottom: 18px;">
         <article class="card">
-          <h3><span class="lang-en">WCAG 2.1 Contrast Ratio &amp; Relative Luminance</span><span class="lang-vi">Tỷ lệ Tương phản WCAG 2.1 &amp; Độ sáng tương đối</span></h3>
+          <h3><span class="lang-en">WCAG 2.1 Contrast Ratio &amp; Relative Luminance</span><span class="lang-vi">Tỷ lệ
+              Tương phản WCAG 2.1 &amp; Độ sáng tương đối</span></h3>
           <p class="lang-en">
-            Human vision is far more sensitive to green light (~71.5%) than red (~21.3%) or blue (~7.2%). WCAG 2.1 converts sRGB channels into linear light and computes <strong>Relative Luminance (L)</strong>, then calculates contrast ratio from <code>1:1</code> (identical) to <code>21:1</code> (black on white):
+            Human vision is far more sensitive to green light (~71.5%) than red (~21.3%) or blue (~7.2%). WCAG 2.1
+            converts sRGB channels into linear light and computes <strong>Relative Luminance (L)</strong>, then
+            calculates contrast ratio from <code>1:1</code> (identical) to <code>21:1</code> (black on white):
           </p>
           <p class="lang-vi">
-            Mắt người nhạy với ánh sáng xanh lá (~71,5%) hơn rất nhiều so với đỏ (~21,3%) và xanh dương (~7,2%). Chuẩn WCAG 2.1 tuyến tính hoá các kênh sRGB để tính <strong>Độ sáng tương đối (L)</strong>, sau đó tính tỷ lệ tương phản từ <code>1:1</code> đến <code>21:1</code>:
+            Mắt người nhạy với ánh sáng xanh lá (~71,5%) hơn rất nhiều so với đỏ (~21,3%) và xanh dương (~7,2%). Chuẩn
+            WCAG 2.1 tuyến tính hoá các kênh sRGB để tính <strong>Độ sáng tương đối (L)</strong>, sau đó tính tỷ lệ
+            tương phản từ <code>1:1</code> đến <code>21:1</code>:
           </p>
           <div class="formula-box">
-            L = 0.2126·R + 0.7152·G + 0.0722·B<br/>
+            L = 0.2126·R + 0.7152·G + 0.0722·B<br />
             Contrast = (L_lighter + 0.05) / (L_darker + 0.05)
           </div>
           <div class="badge-row">
-            <span class="wcag-pill wcag-aaa">AAA &ge; 7.0:1 <span class="lang-en">(Enhanced)</span><span class="lang-vi">(Cao cấp)</span></span>
-            <span class="wcag-pill wcag-aa">AA &ge; 4.5:1 <span class="lang-en">(Normal text)</span><span class="lang-vi">(Chữ thường)</span></span>
-            <span class="wcag-pill wcag-aal">AA Large &ge; 3.0:1 <span class="lang-en">(Large text / UI)</span><span class="lang-vi">(Chữ lớn / Icon)</span></span>
+            <span class="wcag-pill wcag-aaa">AAA &ge; 7.0:1 <span class="lang-en">(Enhanced)</span><span
+                class="lang-vi">(Cao cấp)</span></span>
+            <span class="wcag-pill wcag-aa">AA &ge; 4.5:1 <span class="lang-en">(Normal text)</span><span
+                class="lang-vi">(Chữ thường)</span></span>
+            <span class="wcag-pill wcag-aal">AA Large &ge; 3.0:1 <span class="lang-en">(Large text / UI)</span><span
+                class="lang-vi">(Chữ lớn / Icon)</span></span>
             <span class="wcag-pill wcag-fail">Fail &lt; 3.0:1</span>
           </div>
         </article>
 
         <article class="card">
-          <h3><span class="lang-en">Alpha Compositing (Flattened) &amp; Reverse Solving</span><span class="lang-vi">Pha trộn Alpha (Màu Solid gộp) &amp; Giải ngược</span></h3>
+          <h3><span class="lang-en">Alpha Compositing (Flattened) &amp; Reverse Solving</span><span class="lang-vi">Pha
+              trộn Alpha (Màu Solid gộp) &amp; Giải ngược</span></h3>
           <p class="lang-en">
-            When a semi-transparent foreground color (opacity <code>&alpha;</code>) sits on an opaque background, screens composite them using the <strong>Porter-Duff SrcOver</strong> equation. AlphaBlend computes this exact flattened solid color in real time so you can avoid costly overdraw or match visual swatches accurately.
+            When a semi-transparent foreground color (opacity <code>&alpha;</code>) sits on an opaque background,
+            screens composite them using the <strong>Porter-Duff SrcOver</strong> equation. AlphaBlend computes this
+            exact flattened solid color in real time so you can avoid costly overdraw or match visual swatches
+            accurately.
           </p>
           <p class="lang-vi">
-            Khi một lớp phủ bán trong suốt (độ mờ <code>&alpha;</code>) nằm trên nền đặc, màn hình sẽ gộp chúng theo công thức <strong>Porter-Duff SrcOver</strong>. AlphaBlend tính chính xác màu solid tương đương này theo thời gian thực để bạn dùng trực tiếp hoặc so sánh độ tương phản thực tế.
+            Khi một lớp phủ bán trong suốt (độ mờ <code>&alpha;</code>) nằm trên nền đặc, màn hình sẽ gộp chúng theo
+            công thức <strong>Porter-Duff SrcOver</strong>. AlphaBlend tính chính xác màu solid tương đương này theo
+            thời gian thực để bạn dùng trực tiếp hoặc so sánh độ tương phản thực tế.
           </p>
           <div class="alpha-demo" aria-hidden="true">
-            <div class="checker-chip"><div class="checker-chip-overlay" style="background:rgba(255,152,0,0.8)"></div></div>
+            <div class="checker-chip">
+              <div class="checker-chip-overlay" style="background:rgba(255,152,0,0.8)"></div>
+            </div>
             <span class="alpha-arrow">+</span>
-            <div class="checker-chip"><div class="checker-chip-overlay" style="background:#ffffff"></div></div>
+            <div class="checker-chip">
+              <div class="checker-chip-overlay" style="background:#ffffff"></div>
+            </div>
             <span class="alpha-arrow">=</span>
-            <div class="checker-chip"><div class="checker-chip-overlay" style="background:#ffad33"></div></div>
+            <div class="checker-chip">
+              <div class="checker-chip-overlay" style="background:#ffad33"></div>
+            </div>
             <code>#CCFF9800 over #FFFFFF &rarr; #FFAD33</code>
           </div>
           <div class="formula-box">
-            C_out = &alpha; · C_fg + (1 &minus; &alpha;) · C_bg<br/>
+            C_out = &alpha; · C_fg + (1 &minus; &alpha;) · C_bg<br />
             Reverse: C_fg = C_bg + (C_target &minus; C_bg) / &alpha;
           </div>
         </article>
@@ -999,12 +1285,18 @@
       <!-- 2.3 Tonal Scales, Semantic Roles, Color Harmonies, OKLCH -->
       <div class="grid-2">
         <article class="card">
-          <h3><span class="lang-en">Tonal Scale (50–950) &amp; Semantic Roles</span><span class="lang-vi">Thang sắc độ (50–950) &amp; Vai trò màu ngữ nghĩa</span></h3>
+          <h3><span class="lang-en">Tonal Scale (50-950) &amp; Semantic Roles</span><span class="lang-vi">Thang sắc độ
+              (50-950) &amp; Vai trò màu ngữ nghĩa</span></h3>
           <p class="lang-en">
-            A <strong>Tonal Scale</strong> expands a single brand <strong>Seed Color</strong> into 11 graduated lightness stops from <code>50</code> (tinted background wash) through <code>500</code> (core brand tone) to <code>950</code> (deep dark ink), subtly softening saturation at the extremes so light tints don't look chalky and dark shades stay rich.
+            A <strong>Tonal Scale</strong> expands a single brand <strong>Seed Color</strong> into 11 graduated
+            lightness stops from <code>50</code> (tinted background wash) through <code>500</code> (core brand tone) to
+            <code>950</code> (deep dark ink), subtly softening saturation at the extremes so light tints don't look
+            chalky and dark shades stay rich.
           </p>
           <p class="lang-vi">
-            <strong>Thang sắc độ (Tonal Scale)</strong> mở rộng một <strong>Màu gốc (Seed Color)</strong> thành 11 bậc sáng tối từ <code>50</code> (nền nhạt) qua <code>500</code> (màu chủ đạo) đến <code>950</code> (tông tối sâu), tự động điều tiết độ bão hoà ở hai đầu để màu sáng không bị gắt và màu tối giữ được chiều sâu.
+            <strong>Thang sắc độ (Tonal Scale)</strong> mở rộng một <strong>Màu gốc (Seed Color)</strong> thành 11 bậc
+            sáng tối từ <code>50</code> (nền nhạt) qua <code>500</code> (màu chủ đạo) đến <code>950</code> (tông tối
+            sâu), tự động điều tiết độ bão hoà ở hai đầu để màu sáng không bị gắt và màu tối giữ được chiều sâu.
           </p>
           <div class="tonal-strip" aria-label="Example 11-step tonal scale from 50 to 950">
             <div class="tonal-stop" style="background:#fff7ed;color:#111">50</div>
@@ -1020,44 +1312,66 @@
             <div class="tonal-stop" style="background:#431407;color:#fff">950</div>
           </div>
           <p class="lang-en">
-            <strong>Semantic Roles</strong> (<code>Primary</code>, <code>Secondary</code>, <code>Tertiary</code>, <code>Surface</code>, <code>Error</code>, and paired <code>on-*</code> text roles) map colors to functional meaning rather than hardcoded hex codes, enabling effortless Light/Dark theme switching with automatic WCAG-friendly foreground contrast.
+            <strong>Semantic Roles</strong> (<code>Primary</code>, <code>Secondary</code>, <code>Tertiary</code>,
+            <code>Surface</code>, <code>Error</code>, and paired <code>on-*</code> text roles) map colors to functional
+            meaning rather than hardcoded hex codes, enabling effortless Light/Dark theme switching with automatic
+            WCAG-friendly foreground contrast.
           </p>
           <p class="lang-vi">
-            <strong>Vai trò màu ngữ nghĩa (Semantic Roles)</strong> như <code>Primary</code>, <code>Secondary</code>, <code>Tertiary</code>, <code>Surface</code>, <code>Error</code> gắn màu theo chức năng thay vì mã cứng, giúp tự động chuyển đổi giao diện Sáng/Tối mà vẫn giữ tương phản chữ chuẩn WCAG.
+            <strong>Vai trò màu ngữ nghĩa (Semantic Roles)</strong> như <code>Primary</code>, <code>Secondary</code>,
+            <code>Tertiary</code>, <code>Surface</code>, <code>Error</code> gắn màu theo chức năng thay vì mã cứng, giúp
+            tự động chuyển đổi giao diện Sáng/Tối mà vẫn giữ tương phản chữ chuẩn WCAG.
           </p>
         </article>
 
         <article class="card">
-          <h3><span class="lang-en">Color Harmonies &amp; Perceptual Spaces (HSL vs OKLCH)</span><span class="lang-vi">Phối màu hài hoà &amp; Hệ màu HSL / OKLCH</span></h3>
+          <h3><span class="lang-en">Color Harmonies &amp; Perceptual Spaces (HSL vs OKLCH)</span><span
+              class="lang-vi">Phối màu hài hoà &amp; Hệ màu HSL / OKLCH</span></h3>
           <p class="lang-en">
-            <strong>Color Harmonies</strong> rotate your seed color's Hue angle on the 360&deg; color wheel to build balanced palettes:
+            <strong>Color Harmonies</strong> rotate your seed color's Hue angle on the 360&deg; color wheel to build
+            balanced palettes:
           </p>
           <p class="lang-vi">
-            <strong>Phối màu hài hoà (Color Harmonies)</strong> xoay góc sắc độ (Hue) của màu gốc trên vòng tròn 360&deg; để tạo các bộ phối cân bằng:
+            <strong>Phối màu hài hoà (Color Harmonies)</strong> xoay góc sắc độ (Hue) của màu gốc trên vòng tròn
+            360&deg; để tạo các bộ phối cân bằng:
           </p>
           <div class="harmony-list">
             <div class="harmony-item">
-              <span><strong>Complementary</strong> (+180&deg;) — <span class="lang-en">High-impact contrast</span><span class="lang-vi">Tương phản nổi bật</span></span>
-              <span class="harmony-dots"><span class="h-dot" style="background:#e11d48"></span><span class="h-dot" style="background:#1de1b6"></span></span>
+              <span><strong>Complementary</strong> (+180&deg;) — <span class="lang-en">High-impact contrast</span><span
+                  class="lang-vi">Tương phản nổi bật</span></span>
+              <span class="harmony-dots"><span class="h-dot" style="background:#e11d48"></span><span class="h-dot"
+                  style="background:#1de1b6"></span></span>
             </div>
             <div class="harmony-item">
-              <span><strong>Analogous</strong> (&minus;30&deg;, +30&deg;) — <span class="lang-en">Cohesive, calm flow</span><span class="lang-vi">Chuyển màu êm dịu</span></span>
-              <span class="harmony-dots"><span class="h-dot" style="background:#e11daa"></span><span class="h-dot" style="background:#e11d48"></span><span class="h-dot" style="background:#e1541d"></span></span>
+              <span><strong>Analogous</strong> (&minus;30&deg;, +30&deg;) — <span class="lang-en">Cohesive, calm
+                  flow</span><span class="lang-vi">Chuyển màu êm dịu</span></span>
+              <span class="harmony-dots"><span class="h-dot" style="background:#e11daa"></span><span class="h-dot"
+                  style="background:#e11d48"></span><span class="h-dot" style="background:#e1541d"></span></span>
             </div>
             <div class="harmony-item">
-              <span><strong>Triadic</strong> (+120&deg;, +240&deg;) — <span class="lang-en">Vibrant 3-way balance</span><span class="lang-vi">Cân bằng 3 sắc rực rỡ</span></span>
-              <span class="harmony-dots"><span class="h-dot" style="background:#e11d48"></span><span class="h-dot" style="background:#48e11d"></span><span class="h-dot" style="background:#1d48e1"></span></span>
+              <span><strong>Triadic</strong> (+120&deg;, +240&deg;) — <span class="lang-en">Vibrant 3-way
+                  balance</span><span class="lang-vi">Cân bằng 3 sắc rực rỡ</span></span>
+              <span class="harmony-dots"><span class="h-dot" style="background:#e11d48"></span><span class="h-dot"
+                  style="background:#48e11d"></span><span class="h-dot" style="background:#1d48e1"></span></span>
             </div>
             <div class="harmony-item">
-              <span><strong>Split Complementary</strong> (+150&deg;, +210&deg;) — <span class="lang-en">Softer contrast</span><span class="lang-vi">Tương phản mềm hơn</span></span>
-              <span class="harmony-dots"><span class="h-dot" style="background:#e11d48"></span><span class="h-dot" style="background:#1de154"></span><span class="h-dot" style="background:#1daae1"></span></span>
+              <span><strong>Split Complementary</strong> (+150&deg;, +210&deg;) — <span class="lang-en">Softer
+                  contrast</span><span class="lang-vi">Tương phản mềm hơn</span></span>
+              <span class="harmony-dots"><span class="h-dot" style="background:#e11d48"></span><span class="h-dot"
+                  style="background:#1de154"></span><span class="h-dot" style="background:#1daae1"></span></span>
             </div>
           </div>
           <p class="lang-en" style="margin-top: 14px;">
-            <strong>Why OKLCH?</strong> Unlike HSL — where yellow and blue at <code>50%</code> lightness look dramatically different in brightness — <strong>OKLCH</strong> (Lightness <code>L</code>, Chroma <code>C</code>, Hue <code>H</code>) is designed around human visual perception, so two colors with the same <code>L</code> value share consistent perceived brightness and contrast.
+            <strong>Why OKLCH?</strong> Unlike HSL — where yellow and blue at <code>50%</code> lightness look
+            dramatically different in brightness — <strong>OKLCH</strong> (Lightness <code>L</code>, Chroma
+            <code>C</code>, Hue <code>H</code>) is designed around human visual perception, so two colors with the same
+            <code>L</code> value share consistent perceived brightness and contrast.
           </p>
           <p class="lang-vi" style="margin-top: 14px;">
-            <strong>Vì sao có OKLCH?</strong> Khác với HSL — nơi màu vàng và xanh dương cùng độ sáng <code>50%</code> nhưng mắt người nhìn thấy chênh sáng rất mạnh — hệ <strong>OKLCH</strong> (Lightness <code>L</code>, Chroma <code>C</code>, Hue <code>H</code>) được hiệu chỉnh theo cảm nhận thị giác thực tế, giúp các màu cùng mức <code>L</code> có độ sáng và tương phản đồng đều hơn.
+            <strong>Vì sao có OKLCH?</strong> Khác với HSL — nơi màu vàng và xanh dương cùng độ sáng <code>50%</code>
+            nhưng mắt người nhìn thấy chênh sáng rất mạnh — hệ <strong>OKLCH</strong> (Lightness <code>L</code>, Chroma
+            <code>C</code>, Hue <code>H</code>) được hiệu chỉnh theo cảm nhận thị giác thực tế, giúp các màu cùng mức
+            <code>L</code> có độ sáng và tương phản đồng đều hơn.
           </p>
         </article>
       </div>
@@ -1078,8 +1392,14 @@
             <span class="lang-vi">AlphaBlend có dùng được ngoại tuyến mà không cần đăng nhập không?</span>
           </summary>
           <div class="faq-body">
-            <span class="lang-en">Yes. AlphaBlend is built local-first. Every feature — Blend Studio, Alpha Scale, Reverse Solver, Theme Studio, Photo Palette Extraction, Color Notebook, Recently Copied, and JSON backup — works completely offline with all data stored privately on your device. Signing in with Google is entirely optional and only needed if you want real-time Cloud Sync across devices.</span>
-            <span class="lang-vi">Có. AlphaBlend hoạt động theo nguyên tắc ưu tiên lưu trữ cục bộ (local-first). Toàn bộ tính năng như Pha màu, Thang Alpha, Giải ngược, Bộ Theme, Trích màu từ ảnh, Sổ màu, Vừa sao chép và sao lưu JSON đều chạy hoàn toàn ngoại tuyến. Việc đăng nhập Google là hoàn toàn tuỳ chọn nếu bạn muốn đồng bộ Sổ màu qua đám mây giữa các thiết bị.</span>
+            <span class="lang-en">Yes. AlphaBlend is built local-first. Every feature — Blend Studio, Alpha Scale,
+              Reverse Solver, Theme Studio, Photo Palette Extraction, Color Notebook, Recently Copied, and JSON backup —
+              works completely offline with all data stored privately on your device. Signing in with Google is entirely
+              optional and only needed if you want real-time Cloud Sync across devices.</span>
+            <span class="lang-vi">Có. AlphaBlend hoạt động theo nguyên tắc ưu tiên lưu trữ cục bộ (local-first). Toàn bộ
+              tính năng như Pha màu, Thang Alpha, Giải ngược, Bộ Theme, Trích màu từ ảnh, Sổ màu, Vừa sao chép và sao
+              lưu JSON đều chạy hoàn toàn ngoại tuyến. Việc đăng nhập Google là hoàn toàn tuỳ chọn nếu bạn muốn đồng bộ
+              Sổ màu qua đám mây giữa các thiết bị.</span>
           </div>
         </details>
 
@@ -1089,8 +1409,16 @@
             <span class="lang-vi">Tại sao mã Android Hex (#AARRGGBB) khác với Web Hex (#RRGGBBAA)?</span>
           </summary>
           <div class="faq-body">
-            <span class="lang-en">Android XML, Flutter, and Jetpack Compose place the 2-digit alpha transparency byte at the <strong>beginning</strong> (<code>#AARRGGBB</code>, e.g. <code>#CCFF9800</code> for 80% orange). Modern CSS and Web specifications place the alpha byte at the <strong>end</strong> (<code>#RRGGBBAA</code>, e.g. <code>#FF9800CC</code>). You can set your preferred default copy format anytime in <strong>Settings &rarr; Copy &amp; Format Preferences</strong>.</span>
-            <span class="lang-vi">Android XML, Flutter và Jetpack Compose đặt 2 ký tự độ trong suốt (Alpha) ở <strong>đầu chuỗi</strong> (<code>#AARRGGBB</code>, ví dụ <code>#CCFF9800</code> cho màu cam 80%). Trong khi đó, CSS và Web đặt Alpha ở <strong>cuối chuỗi</strong> (<code>#RRGGBBAA</code>, ví dụ <code>#FF9800CC</code>). Bạn có thể chọn định dạng sao chép mặc định trong <strong>Cài đặt &rarr; Tuỳ chọn sao chép &amp; định dạng</strong>.</span>
+            <span class="lang-en">Android XML, Flutter, and Jetpack Compose place the 2-digit alpha transparency byte at
+              the <strong>beginning</strong> (<code>#AARRGGBB</code>, e.g. <code>#CCFF9800</code> for 80% orange).
+              Modern CSS and Web specifications place the alpha byte at the <strong>end</strong>
+              (<code>#RRGGBBAA</code>, e.g. <code>#FF9800CC</code>). You can set your preferred default copy format
+              anytime in <strong>Settings &rarr; Copy &amp; Format Preferences</strong>.</span>
+            <span class="lang-vi">Android XML, Flutter và Jetpack Compose đặt 2 ký tự độ trong suốt (Alpha) ở
+              <strong>đầu chuỗi</strong> (<code>#AARRGGBB</code>, ví dụ <code>#CCFF9800</code> cho màu cam 80%). Trong
+              khi đó, CSS và Web đặt Alpha ở <strong>cuối chuỗi</strong> (<code>#RRGGBBAA</code>, ví dụ
+              <code>#FF9800CC</code>). Bạn có thể chọn định dạng sao chép mặc định trong <strong>Cài đặt &rarr; Tuỳ chọn
+                sao chép &amp; định dạng</strong>.</span>
           </div>
         </details>
 
@@ -1100,8 +1428,13 @@
             <span class="lang-vi">Làm sao để giữ lại danh sách màu yêu thích từ phiên bản V2 cũ?</span>
           </summary>
           <div class="faq-body">
-            <span class="lang-en">Simply sign in with the same Google account in <strong>Settings</strong>. AlphaBlend V3 automatically detects your legacy cloud favorites and migrates them once into a new Color Notebook collection named <strong>Saved Favorites</strong> without overwriting your new Brand Kits.</span>
-            <span class="lang-vi">Chỉ cần đăng nhập lại đúng tài khoản Google trước đây trong mục <strong>Cài đặt</strong>. AlphaBlend V3 sẽ tự động phát hiện danh sách màu yêu thích cũ trên đám mây và chuyển đổi vào một bộ sưu tập mới mang tên <strong>Saved Favorites</strong> trong Sổ màu mà không làm mất dữ liệu mới của bạn.</span>
+            <span class="lang-en">Simply sign in with the same Google account in <strong>Settings</strong>. AlphaBlend
+              V3 automatically detects your legacy cloud favorites and migrates them once into a new Color Notebook
+              collection named <strong>Saved Favorites</strong> without overwriting your new Brand Kits.</span>
+            <span class="lang-vi">Chỉ cần đăng nhập lại đúng tài khoản Google trước đây trong mục <strong>Cài
+                đặt</strong>. AlphaBlend V3 sẽ tự động phát hiện danh sách màu yêu thích cũ trên đám mây và chuyển đổi
+              vào một bộ sưu tập mới mang tên <strong>Saved Favorites</strong> trong Sổ màu mà không làm mất dữ liệu mới
+              của bạn.</span>
           </div>
         </details>
 
@@ -1111,8 +1444,13 @@
             <span class="lang-vi">Làm sao để sao lưu hoặc chuyển các Brand Kit thủ công?</span>
           </summary>
           <div class="faq-body">
-            <span class="lang-en">Open <strong>Settings &rarr; Local Backup &amp; Portability</strong> and tap <strong>Copy Backup JSON</strong> to save all your collections as clean JSON text. On another device, tap <strong>Import JSON</strong> and paste the exported text to merge those collections into your Notebook.</span>
-            <span class="lang-vi">Mở <strong>Cài đặt &rarr; Sao lưu &amp; Khôi phục Local</strong> và bấm <strong>Sao chép JSON sao lưu</strong> để xuất toàn bộ bộ màu dưới dạng văn bản JSON. Trên thiết bị khác, bấm <strong>Nhập JSON</strong> và dán nội dung đã xuất để gộp vào Sổ màu.</span>
+            <span class="lang-en">Open <strong>Settings &rarr; Local Backup &amp; Portability</strong> and tap
+              <strong>Copy Backup JSON</strong> to save all your collections as clean JSON text. On another device, tap
+              <strong>Import JSON</strong> and paste the exported text to merge those collections into your
+              Notebook.</span>
+            <span class="lang-vi">Mở <strong>Cài đặt &rarr; Sao lưu &amp; Khôi phục Local</strong> và bấm <strong>Sao
+                chép JSON sao lưu</strong> để xuất toàn bộ bộ màu dưới dạng văn bản JSON. Trên thiết bị khác, bấm
+              <strong>Nhập JSON</strong> và dán nội dung đã xuất để gộp vào Sổ màu.</span>
           </div>
         </details>
 
@@ -1122,8 +1460,13 @@
             <span class="lang-vi">AlphaBlend xử lý ảnh và quyền riêng tư của tôi như thế nào?</span>
           </summary>
           <div class="faq-body">
-            <span class="lang-en">Photo palette extraction runs 100% on-device. Your selected images are never uploaded to external servers — only the extracted hex color values you explicitly choose to save in your Color Notebook are stored locally (and synced to your private Firestore document if you choose to sign in).</span>
-            <span class="lang-vi">Tính năng trích xuất bảng màu từ ảnh chạy 100% trực tiếp trên thiết bị của bạn. Ảnh bạn chọn không bao giờ được tải lên máy chủ — chỉ các mã màu hex mà bạn chủ động lưu vào Sổ màu mới được lưu cục bộ (hoặc đồng bộ lên tài khoản Firestore riêng tư nếu bạn đăng nhập).</span>
+            <span class="lang-en">Photo palette extraction runs 100% on-device. Your selected images are never uploaded
+              to external servers — only the extracted hex color values you explicitly choose to save in your Color
+              Notebook are stored locally (and synced to your private Firestore document if you choose to sign
+              in).</span>
+            <span class="lang-vi">Tính năng trích xuất bảng màu từ ảnh chạy 100% trực tiếp trên thiết bị của bạn. Ảnh
+              bạn chọn không bao giờ được tải lên máy chủ — chỉ các mã màu hex mà bạn chủ động lưu vào Sổ màu mới được
+              lưu cục bộ (hoặc đồng bộ lên tài khoản Firestore riêng tư nếu bạn đăng nhập).</span>
           </div>
         </details>
       </div>
@@ -1133,14 +1476,19 @@
     <section id="contact">
       <div class="contact-card">
         <div>
-          <span class="eyebrow"><span class="lang-en">Need Help?</span><span class="lang-vi">Cần hỗ trợ thêm?</span></span>
+          <span class="eyebrow"><span class="lang-en">Need Help?</span><span class="lang-vi">Cần hỗ trợ
+              thêm?</span></span>
           <h2 class="lang-en">Contact AlphaBlend Support</h2>
           <h2 class="lang-vi">Liên hệ đội ngũ hỗ trợ AlphaBlend</h2>
           <p class="lang-en">
-            Found a bug, have a feature idea, or need help with Cloud Sync or data recovery? Email us anytime and include your device model, OS version, and app version (<code>3.0.0</code>). We typically reply within 1–2 business days.
+            Found a bug, have a feature idea, or need help with Cloud Sync or data recovery? Email us anytime and
+            include your device model, OS version, and app version (<code>3.0.0</code>). We typically reply within 1-2
+            business days.
           </p>
           <p class="lang-vi">
-            Nếu bạn gặp lỗi, có góp ý tính năng mới hoặc cần hỗ trợ về đồng bộ Cloud / khôi phục dữ liệu, hãy gửi email cho chúng tôi kèm tên thiết bị, phiên bản hệ điều hành và phiên bản ứng dụng (<code>3.0.0</code>). Thời gian phản hồi thông thường từ 1–2 ngày làm việc.
+            Nếu bạn gặp lỗi, có góp ý tính năng mới hoặc cần hỗ trợ về đồng bộ Cloud / khôi phục dữ liệu, hãy gửi email
+            cho chúng tôi kèm tên thiết bị, phiên bản hệ điều hành và phiên bản ứng dụng (<code>3.0.0</code>). Thời gian
+            phản hồi thông thường từ 1-2 ngày làm việc.
           </p>
         </div>
         <div class="contact-actions">
@@ -1149,8 +1497,8 @@
             <span class="lang-en">Email Support</span>
             <span class="lang-vi">Gửi Email Hỗ trợ</span>
           </a>
-          <a class="btn-secondary" href="https://nwanvu.com" target="_blank" rel="noopener noreferrer">
-            nwanvu.com
+          <a class="btn-secondary" href="https://nwanvu93.github.io" target="_blank" rel="noopener noreferrer">
+            My Website
           </a>
         </div>
       </div>
@@ -1214,4 +1562,5 @@
     })();
   </script>
 </body>
+
 </html>
